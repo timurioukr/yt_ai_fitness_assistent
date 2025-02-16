@@ -46,6 +46,7 @@ async function predictImage(image) {
   canvas.width = 224;
   canvas.height = 224;
   ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+  // https://www.youtube.com/@teemurios_code
 
   // Перетворення зображення з canvas в тензор:
   // - tf.browser.fromPixels читає пікселі з canvas.
@@ -90,6 +91,8 @@ async function predictImage(image) {
     console.error("Помилка під час передбачення:", error);
   }
 }
+
+// https://www.youtube.com/@teemurios_code
 
 window.onload = async function () {
   await loadModel();
